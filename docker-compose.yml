@@ -1,0 +1,27 @@
+version: "3.9"
+
+networks:
+  simplified-transactions-network:
+    driver: bridge
+
+services:
+  simplified-transactions-mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "3306:3306"
+    networks:
+      - simplified-transactions-network
+
+  simplified-transactions-api:
+    image: simplified-transactions-api
+    command: ["/wait-for-it.sh", "simplified-transactions-mysql:3306", "-t", "45", "--", "java", "-jar", "api.jar"]
+    environment:
+      DB_HOST: simplified-transactions-mysql
+    ports:
+      - "8080:8080"
+    networks:
+      - simplified-transactions-network
+    depends_on:
+      - simplified-transactions-mysql
