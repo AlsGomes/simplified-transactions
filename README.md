@@ -12,7 +12,7 @@ API and Integration Tests were done and you can run all of them with
 
 ## How to run the Project
 ### With IDEA
-Using an IDEA, you can just import the project as an Existing Maven Project and be sure to be running an instance of MySQL Database (installed or in a container). MySQL version to to run the project correctly is 8.0.
+Using an IDEA, you can just import the project as an Existing Maven Project and be sure to be running an instance of MySQL Database (installed or in a container). MySQL version to run the project correctly is 8.0.
 
 Verify the username and password of the application.properties file. By default it's set to
 * Username: root
