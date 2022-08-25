@@ -10,6 +10,9 @@ Also, when a transaction is authorized, the user that received the money is bein
 API and Integration Tests were done and you can run all of them with 
 >mvnw test
 
+### UML Model
+The model can be found at [https://snipboard.io/rf9cwO.jpg](https://snipboard.io/rf9cwO.jpg)
+
 ## How to run the Project
 ### With IDEA
 Using an IDEA, you can just import the project as an Existing Maven Project and be sure to be running an instance of MySQL Database (installed or in a container). MySQL version to run the project correctly is 8.0.
